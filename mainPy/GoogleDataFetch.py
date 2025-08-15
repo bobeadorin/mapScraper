@@ -3,7 +3,7 @@ import requests
 
 def getLocationRadius(location, radius = 3000) -> list:
     print(location)
-    apiKey : str = "AIzaSyCSplKljwEnyAPRjYty6Bj0DKG9EO_1igE"
+    apiKey : str = "<YOUR_KEY>"
     apiUrl : str = f'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={location}&radius={radius}&type=bus_station&key={apiKey}'
     response : dict = requests.get(apiUrl).json()
     print(response)
